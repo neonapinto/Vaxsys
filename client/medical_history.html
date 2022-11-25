@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>History</title>   
+</head>
+  <body>
+    <div class="header">
+      <a class="logo" href="">VAXSYS</a>
+      <div class="navbar">
+        <a class="navbar-menu" href="introduction.html" title="home">Contact Us</a>
+        <a class="navbar-menu booking-btn" href="schedule_vaccination.html" title="book">Book Appointment</a>
+        <a class="navbar-menu" href="user_account.html" title="account">
+           <img class="navbar-account" src="img/account.png"/>
+        </a>
+      </div>
+    </div>
+    <div class="content">
+         <form class="row g-3">
+             <h3>Prevaccination Checklist for Vaccination.</h3>
+             <div class="form-group col-12">
+                <label for="firstName" class="col-form-label">Do you have a health condition or are you undergoing treatment that makes you moderately or
+                    severely immunocompromised? This would include, but not limited to, treatment for cancer, HIV, receipt of organ transplant,
+                    immunosuppressive therapy or high-dose corticosteroids, CAR-T-cell therapy, hematopoietic cell transplant [HCT], or moderate or severe
+                    primary immunodeficiency. </label>
+                    <fieldset class="form-group col-md-10">
+                        <div class="row">
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios1"  value="yes">
+                              <label class="form-check-label" for="yes">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios1"  value="no" checked>
+                              <label class="form-check-label" for="no">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="firstName" class="col-form-label">Have you ever had an allergic reaction to another vaccine (other than COVID-19 vaccine)
+                    or an injectable medication?
+                    (This would include a severe allergic reaction [e.g., anaphylaxis] that required treatment with epinephrine or EpiPen® or that caused you
+                    to go to the hospital. It would also include an allergic reaction that caused hives, swelling, or respiratory distress, including wheezing.) 
+                </label>
+                <fieldset class="form-group col-md-10">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gridRadios2"  value="yes">
+                          <label class="form-check-label" for="yes">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gridRadios2"  value="no" checked>
+                          <label class="form-check-label" for="no">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+              </div>
+              <p class="medical-text"> Check all that apply to you:</p>
+              <div class="form-group col-md-12">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Have a history of myocarditis or pericarditis </label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Have a history of Multisystem Inflammatory Syndrome
+                            (MIS-C or MIS-A)?</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">History of an immune-mediated syndrome defined by
+                            thrombosis and thrombocytopenia, such as heparininduced thrombocytopenia (HIT)</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Have a history of thrombosis with thrombocytopenia
+                            syndrome (TTS)</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Have a history of Guillain-Barré Syndrome (GBS)</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Do you have a bleeding disorder or are taking blood
+                            thinners?</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Have a history of COVID-19 disease within the past 3 months?</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Are you or could you be pregnant?</label>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">Are you a Diabetic?</label>
+                    </div>
+                </div>
+              <div class="form-group col-md-12">
+                <div class="col-sm-10 medical-history-btns">
+                  <button type="button" class="btn btn-primary" onclick="window.location.href='schedule_vaccination.html'">Confirm</button>
+                  <p class="skip-btn"  onclick="window.location.href='schedule_vaccination.html'">Skip</p>
+                </div>
+              </div>
+        </form>
+      </div>
+      
+      <div class="text-center footer">
+        © 2022 Copyright:
+        <a class="text-dark">VAXSYS</a>
+    </div>
+</body>
+  
+</html>

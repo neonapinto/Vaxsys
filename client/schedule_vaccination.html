@@ -1,0 +1,329 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/f97972004d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Booking Appointment</title> 
+    </head>
+    <body>
+        <div class="modal" id="confirmModal" style="display: none;">
+          <div class="modal-body">
+            <p id="statement" class="modal-text"></p>
+            <div class="appointment">
+              <p ><i class="fas fa-syringe"></i> <span id="vaccine"></span></p>
+              <p ><i class="fas fa-map-marker-alt"></i><span id="location"></span></p>
+              <p ><i class="fas fa-clock"></i><span id="time"></span></p>
+            </div>
+            <div class="modal-btn">
+              <button type="button" class="btn btn-primary" id="confirm-modal">Yes</button>
+              <button type="button" class="btn btn-cancel" id="close-modal">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="header">
+                <a class="logo" href="">VAXSYS</a>
+                <div class="navbar">
+                    <a class="navbar-menu" href="" title="center">Vaccine Centers</a>
+                    <a class="navbar-menu" href="vaccine_certificate.html" title="center">Vaccine Certificate</a>
+                    <a class="navbar-menu" href="introduction.html" title="home">Contact Us</a>
+                    <a class="navbar-menu booking-btn navbar-menu-active" href="" title="book">Book Appointment</a>
+                    <a class="navbar-menu" href="user_account.html" title="account">
+                       <img class="navbar-account" src="img/account.png"/>
+                    </a>
+                </div>
+        </div>
+        <div class="content schedule-content">
+            <div class="col-md-7">
+                <form class="row g-3">
+                    <div class="form-group col-md-6">
+                       <label for="firstName" class="col-form-label">First Name</label>
+                       <div class="col-sm-10">
+                         <input type="text" class="form-control" id="firstName" placeholder="First Name" value="John">
+                       </div>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="lastName" class="col-form-label">Last Name</label>
+                       <div class="col-sm-10">
+                         <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="Doe">
+                       </div>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="hcn" class="col-form-label">HC</label>
+                       <div class="col-sm-10">
+                         <input type="text" class="form-control" id="hcn" placeholder="Health Card Number" value="123456789">
+                       </div>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="inputEmail" class="col-form-label">Email</label>
+                       <div class="col-sm-10">
+                         <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="johndoe@example.com">
+                       </div>
+                     </div>  
+                     <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="dateOfAppointment" name="dateOfBirth" value="2022-06-17">
+                        </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Time</label>
+                        <div class="col-sm-10">
+                            <div class="input-group mb-3">
+                              <select class="custom-select form-control" id="inputGroupSelect01">
+                                <option selected>Choose the Time</option>
+                                <option value="1">10:00</option>
+                                <option value="2">10:15</option>
+                                <option value="3">10:30</option>
+                                <option value="3">10:45</option>
+                                <option value="1">11:00</option>
+                                <option value="2">11:15</option>
+                                <option value="3">11:30</option>
+                                <option value="3">11:45</option>
+                                <option value="1">12:00</option>
+                                <option value="2">12:15</option>
+                                <option value="3">12:30</option>
+                                <option value="3">12:45</option>
+                                <option value="1">14:00</option>
+                                <option value="2">14:15</option>
+                                <option value="3">14:30</option>
+                                <option value="3">14:45</option>
+                                <option value="1">15:00</option>
+                                <option value="2">15:15</option>
+                                <option value="3">15:30</option>
+                                <option value="3">15:45</option>
+                                <option value="3">16:00</option>
+                              </select>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Disease</label>
+                        <div class="col-sm-10">
+                          <div class="input-group mb-3">
+                            <select class="custom-select form-control" id="inputGroupSelect02">
+                              <option selected>Choose the Disease</option>
+                              <option value="chicken_pox">Chicken Pox</option>
+                              <option value="polio">Polio</option>
+                              <option value="covid_19">Covid-19</option>
+                              <option value="influenza">Influenza</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Vaccine Type</label>
+                        <div class="col-sm-10">
+                          <div class="input-group mb-3">
+                            <select class="custom-select form-control" id="inputGroupSelect03">
+                              <option selected>Choose your Vaccine Type</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Dosage</label>
+                        <div class="col-sm-10">
+                          <div class="input-group mb-3">
+                            <select class="custom-select form-control" id="inputGroupSelect04">
+                              <option selected>Choose your Dosage</option>
+                              <option value="2">1st</option>
+                              <option value="2">2nd</option>
+                              <option value="3">3rd</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dateOfBirth" class="col-form-label">Postal code</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="hcn" placeholder="Postal code">
+                        </div>
+                      </div>
+                      <div class="form-group col-12">
+                        <label for="dateOfBirth" class="col-form-label">Clinic and Address</label>
+                        <div class="col-md-11">
+                          <select class="custom-select form-control" id="inputGroupSelect05">
+                            <option selected>Choose your clinic</option>
+                            <option value="1">Montreal Hospital, 3445 St Catherine, Montreal, H4h321</option>
+                            <option value="2">Concorida Health Services, 4445 Guy Concordia, H3h1b3</option>
+                            <option value="3">Mcgill, 1234 Mcgill street, H4h1v3 </option>
+                          </select>
+                        </div>
+                      </div>
+                     
+                     <div class="form-group col-md-12">
+                       <div class="col-sm-10">
+                         <div class="form-check">
+                           <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
+                           <label class="form-check-label" for="gridCheck1">
+                             I hereby, confirm the Appointment.
+                           </label>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                       <div class="col-sm-10 booking-btns">
+                         <button type="button" class="btn btn-primary"  id="book-appointment">Book Appointment</button>
+                         <button type="button" class="btn btn-cancel"  id="cancel-appointment" style="display: none" >Cancel</button>
+                       </div>
+                     </div>
+               </form>
+            </div>
+            <div class="col-md-5 schedule-content-div ">
+               <p class="no-appointment" id="no-appointment">No active appointments</p>
+                <div class="card" id="appointment" style="display: none">
+                    <p id="card-vaccine" class="card-text"></p>
+                    <p class="card-text"><i class="fas fa-map-marker-alt"></i><span id="card-location"></span></p>
+                    <p class="card-text"><i class="fas fa-clock"></i><span id="card-time"></span></p>
+                    <i class="fa-solid fa-pen-to-square" id="edit-btn"></i>
+                    <i class="fas fa-trash" id="delete-btn"></i>
+                </div>              
+            </div>
+           
+
+         </div>
+         <div class="text-center footer">
+          © 2022 Copyright:
+          <a class="text-dark">VAXSYS</a>
+      </div>
+    </body>
+    <script>
+      (() =>{
+        /**
+         * creating different vaccine options for dropdown
+         * */
+        const e1 = document.getElementById("inputGroupSelect01");
+        const e2 = document.getElementById("inputGroupSelect02");
+        const e3 = document.getElementById("inputGroupSelect03");
+        const e4 = document.getElementById("inputGroupSelect04");
+        const e5 = document.getElementById("inputGroupSelect05");
+        let flag = 0;
+
+      /**
+       * Edit button to edit the appointment
+       * */
+      document.getElementById('edit-btn').addEventListener('click', ()=>{
+        document.getElementById("book-appointment").innerHTML = "Save Appointment";
+        document.getElementById("cancel-appointment").style.display = "block";
+      })
+
+      /**
+       * Cancel btn to cancel the appointment
+       * */
+      document.getElementById('cancel-appointment').addEventListener('click', ()=>{
+        document.getElementById("cancel-appointment").style.display = "none";  
+        document.getElementById("book-appointment").innerHTML = "Book Appointment";
+      })
+
+      /**
+       * Booking button to book appointment
+       * */
+      document.getElementById('book-appointment').addEventListener('click', ()=>{
+        if( document.getElementById("book-appointment").innerHTML == "Save Appointment"){
+          document.getElementById("cancel-appointment").style.display = "none";  
+          document.getElementById("book-appointment").innerHTML = "Book Appointment";
+          document.getElementById('vaccine').innerHTML = e2.options[e2.selectedIndex].text + " - " +  e3.options[e3.selectedIndex].text  + " " +  e4.options[e4.selectedIndex].text + " dose" ;
+          document.getElementById('location').innerHTML = e5.options[e5.selectedIndex].text;
+          document.getElementById('time').innerHTML = document.getElementById('dateOfAppointment').value + " - " + e1.options[e1.selectedIndex].text;
+          document.getElementById('card-vaccine').innerHTML =  e2.options[e2.selectedIndex].text + " - " +  e3.options[e3.selectedIndex].text  + " " +  e4.options[e4.selectedIndex].text + " dose" ;
+          document.getElementById('card-location').innerHTML = e5.options[e5.selectedIndex].text;
+          document.getElementById('card-time').innerHTML = document.getElementById('dateOfAppointment').value + " - " + e1.options[e1.selectedIndex].text;
+        }
+        else{
+          document.getElementById('statement').innerHTML="Are you sure to want to confirm the appointment?";
+          document.getElementById('vaccine').innerHTML = e2.options[e2.selectedIndex].text + " - " +  e3.options[e3.selectedIndex].text  + " " +  e4.options[e4.selectedIndex].text + " dose" ;
+          document.getElementById('location').innerHTML = e5.options[e5.selectedIndex].text;
+          document.getElementById('time').innerHTML = document.getElementById('dateOfAppointment').value + " - " + e1.options[e1.selectedIndex].text;
+          document.getElementById('card-vaccine').innerHTML =  e2.options[e2.selectedIndex].text + " - " +  e3.options[e3.selectedIndex].text  + " " +  e4.options[e4.selectedIndex].text + " dose" ;
+          document.getElementById('card-location').innerHTML = e5.options[e5.selectedIndex].text;
+          document.getElementById('card-time').innerHTML = document.getElementById('dateOfAppointment').value + " - " + e1.options[e1.selectedIndex].text;
+          document.getElementById("confirmModal").style.display="flex";
+          flag = 1;
+        }
+      });
+
+      /**
+       * Delete button for deleting a schedule
+       * */
+      document.getElementById('delete-btn').addEventListener('click', ()=>{
+        document.getElementById('statement').innerHTML="Are you sure to want to delete the appointment?";
+        document.getElementById("confirmModal").style.display="flex";
+      });
+
+      /**
+       * Confirm Modal to display booking details
+       * */
+      document.getElementById('confirm-modal').addEventListener('click', ()=>{
+        if(flag == 1){
+          document.getElementById("no-appointment").style.display = "none";
+          document.getElementById("appointment").style.display = "flex";
+          flag = 0;
+        }
+        else{
+          document.getElementById("no-appointment").style.display = "block";
+          document.getElementById("appointment").style.display = "none";
+        }
+        document.getElementById("confirmModal").style.display="none";
+      });
+
+      /**
+       * Button to close the Modal
+       * */
+      document.getElementById('close-modal').addEventListener('click', ()=>{
+        document.getElementById("confirmModal").style.display="none";
+      });
+
+      /**
+       * Update Vaccine dropdown based on disease 
+       * */
+
+      document.getElementById('inputGroupSelect02').addEventListener('change', function(event){
+       document.getElementById('inputGroupSelect03').replaceChildren();
+
+        let option = document.createElement("option");
+        option.value = "default";
+        option.text = "Choose your Vaccine Type";
+        document.getElementById("inputGroupSelect03").appendChild(option);
+
+        if(event.target.value == "covid_19"){
+          let vaccines = ["pfizer", "moderna", "astrazenca"];
+            updateDropdown(vaccines);
+        }
+        else if(event.target.value == "influenza"){
+          let vaccines = ["Standard-dose quadrivalent (QIV)", "High-dose quadrivalent(QIV-HD)", "Adjuvanted trivalent (TIV-adj)"];
+            updateDropdown(vaccines);
+        }
+        else if(event.target.value == "chicken_pox"){
+          let vaccines = ["Univalent varicella", "MMRV vaccine"];
+            updateDropdown(vaccines);
+        }
+        else if(event.target.value == "polio"){
+            let vaccines = [ "Inactivated polio vaccine (IPV)", "Oral polio vaccine (OPV)"];
+            updateDropdown(vaccines);
+        }
+      });
+
+      /**
+       * Utility class for updating dropdown of vaccines
+       * */
+
+      function updateDropdown(vaccines){
+        for (const val of vaccines)
+            {
+                let option = document.createElement("option");
+                option.value = val;
+                option.text = val.charAt(0).toUpperCase() + val.slice(1);
+                document.getElementById("inputGroupSelect03").appendChild(option);
+            }
+      }
+
+
+      })();
+
+    </script>
+</html>

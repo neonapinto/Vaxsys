@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Edit Registration</title>   
+</head>
+  <body>
+    <div class="header">
+      <a class="logo" href="">VAXSYS</a>
+      <div class="navbar">
+          <a class="navbar-menu" href="" title="center">Vaccine Centers</a>
+          <a class="navbar-menu" href="vaccine_certificate.html" title="center">Vaccine Certificate</a>
+          <a class="navbar-menu" href="" title="home">Contact Us</a>
+          <a class="navbar-menu booking-btn" href="schedule_vaccination.html" title="book">Book Appointment</a>
+          <a class="navbar-menu navbar-menu-active" href="user_account.html" title="account">
+             <img class="navbar-account" src="img/account.png"/>
+          </a>
+      </div>
+</div>
+    <div class="content">
+         <form class="row g-3">
+             <div class="form-group col-md-6">
+                <label for="firstName" class="col-form-label">First Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" value="John">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName" class="col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="Doe">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="dateOfBirth" class="col-form-label">DOB</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" >
+                </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="hcn" class="col-form-label">HC</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="hcn" placeholder="Health Card" value="123456789">
+                </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="National Identity" class="col-form-label">National Identity</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="National Identity" placeholder="National Identity" value="H1234H3123">
+                </div>
+              </div>
+              <fieldset class="form-group col-md-10">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="male" value="male" checked>
+                      <label class="form-check-label" for="male">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="female" value="female">
+                      <label class="form-check-label" for="female">
+                        Female
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="other" id="other" value="other">
+                      <label class="form-check-label" for="other">
+                        Other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group col-md-6">
+                <label for="inputEmail" class="col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" readonly value="johndoes@example.com"/>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail" class="col-form-label">Phone number</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="inputPhone" placeholder="Phone" value="9876543211">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword" class="col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" value="123456">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword2" class="col-form-label">Confirm Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Re Enter the Password" value="123456">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="address" class="col-form-label">Address</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="address" placeholder="Address" value="3555 Cote des neiges">
+                </div>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="city" class="col-form-label">City</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="city" placeholder="City" value="Montreal">
+                </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="Province" class="col-form-label">Province</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="Province" placeholder="Province" value="Quebec">
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="Country" class="col-form-label">Country</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="Country" placeholder="Country" value="Canada">
+                </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="postal" class="col-form-label">Postal Code</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="postal" placeholder="Postal Code" value="H3h1v2">
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="security">Choose a Security Question:</label>
+                <select name="securely" id="security" class="security-dropdown">
+                  <option value="Q1">In what city were you born?</option>
+                  <option value="Q2">What is the name of your first school?</option>
+                  <option value="Q3">What was your favorite food as a child?</option>
+                </select>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="securityAnswer" placeholder="Answer.." value="Tacos">
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                  <button type="submit" class="btn btn-cancel">Cancel</button>
+                </div>
+              </div>
+        </form>
+      </div>
+      <div class="text-center footer">
+        © 2022 Copyright:
+        <a class="text-dark">VAXSYS</a>
+    </div>
+</body>
+</html>

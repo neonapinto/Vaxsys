@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login</title>   
+</head>
+  <body>
+    <div class="header">
+      <a class="logo" href="">VAXSYS</a>
+      <div class="navbar">
+          <a class="navbar-menu booking-btn" href="registration.html" title="book">Signup</a>
+      </div>
+    </div>
+    <div class="content">
+        <form  class="login-form">
+          <a class="logo login-logo" href="">VAXSYS</a>
+            <div class="form-group row">
+                <label for="inputEmail" class="col-form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="password">
+              </div>
+              <img src="img/captcha.gif" id="captchaimg" class="captcha"  width="300" height="400">
+              <div class="col-12">
+                <label class="col-form-label" for="message">Enter the above captcha code to login securely</label>
+                <input type="text" class="form-control" id="captcha" placeholder="Captcha"/>
+              </div>
+            <button type="submit" class="btn btn-primary"><a style="color: white;" href="schedule_vaccination.html">Login</a></button>
+            <p class="forgot-password">Forgot password?</p>
+        </form>
+      </div>
+      <div class="text-center footer">
+        © 2022 Copyright:
+        <a class="text-dark">VAXSYS</a>
+    </div>
+</body>
+</html>
