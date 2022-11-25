@@ -1,4 +1,4 @@
-# Vaxsys---Vaccination-Management-System
+# Vaxsys---Vaccination-Management-System - Prototype
 
 ## VAXSYS is expected to have several capabilities, including the following:
 * It will allow people using essentially any computing device, at any time, and fromanywhere to schedule an appointment for a vaccination, cancel an appointment, and
